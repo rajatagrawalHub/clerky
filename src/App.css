@@ -1,38 +1,201 @@
-.App {
-  text-align: center;
+*{
+    margin: 0;
+    padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Color Variables */
+body{
+   --text-primary: #3b3b3b;
+   --secondary: #676767;
+   --border: #262626;
+   --accent-color: #417BD1;
+   --background-primary: #ffffff;
+   --background-secondary: #ececec;
+   --border-design: 1.3px solid #262626;
+   --border-sahdow: 0px 4px 4px #26262675;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Container{
+    min-height: 100svh;
+    background-color: var(--background-secondary);
 }
 
-.App-link {
-  color: #61dafb;
+.flex{
+    display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.flex-row{
+    flex-direction: row;
+}
+
+.flex-column{
+    flex-direction: column;
+}
+
+.center{
+    justify-content: center;
+    align-self: center;
+}
+
+.spaceAround{
+    justify-content: space-around;
+}
+
+.spaceBetween{
+    justify-content: space-between;
+}
+
+.centerBoth{
+    justify-content: center;
+    align-items: center;
+}
+
+.alignItems_Center{
+    align-items: center;
+}
+
+.imageSection{
+    background: url(./Assets/LoginBg.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    flex-basis: 67%;
+}
+
+.formSection{
+    background-color: white;
+    flex-grow: 1;
+    padding: 12px 36px;
+}
+
+
+#logoImg{
+    height: 80px;
+    width: fit-content;
+    margin: 8px 0;
+}
+
+.titleText{
+    font-size: 28px;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.subText{
+    font-size: 14px;
+    color: var(--secondary);
+}
+
+input{
+    padding: 16px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    border: var(--border-design);
+    color: var(--secondary);
+    font-weight: 300;
+}
+
+input::placeholder, textarea::placeholder{
+    font-weight: 300;
+}
+
+input:focus, textarea:focus{
+    border:2px solid var(--accent-color);
+}
+
+button{
+    border: none;
+    outline: none;
+    cursor: pointer
+}
+
+#formBox{
+    gap: 16px;
+}
+
+.blue{
+    background-color: var(--accent-color);
+}
+
+.black{
+    background-color: var(--text-primary);
+}
+
+.red{
+    background-color: #A20202;
+}
+.green{
+    background-color: #349A38;
+}
+
+.btn{
+    padding: 12px;
+    border-radius: 4px;
+    color: var(--background-primary);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.btnHalf{
+    width: fit-content;
+}
+
+.right{
+    align-self: flex-end;
+}
+
+#navBar{
+    padding: 12px 24px;
+    background-color: var(--background-primary);
+}
+
+#navbarRight{
+    gap: 8px;
+}
+
+.navButtons{
+    color: var(--background-primary);
+    padding: 12px;
+    border-radius: 4px;
+    box-shadow: var(--border-sahdow);
+    height: fit-content;
+    align-self: center;
+    cursor: pointer;
+}
+
+#profileLogo{
+    border: 5px solid var(--background-secondary);
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    background:url(./Assets/sampleAvatar.svg);
+    background-size:cover;
+    background-position: center center;
+    margin: 0 12px;
+    cursor: pointer;
+    box-shadow: var(--border-sahdow);
+}
+
+
+
+/* Media Query for Responsiveness */
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .imageSection{
+        display: none;
+    }
+}
+
+/* Absolute Sizing */
+#navbarLogoImage{
+    height: 60px;
 }

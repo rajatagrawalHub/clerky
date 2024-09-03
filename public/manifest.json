@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Clerky",
+  "name": "Clerky: An Inventory cum Accounting Managememnt System",
   "icons": [
     {
       "src": "favicon.ico",
